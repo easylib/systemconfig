@@ -4,7 +4,7 @@ class systemConfig
 {
 	public function __construct()
 	{
-		$this->pdo = new Easy\PDOW\PDOW();
+		$this->pdo = new \Easy\PDOW\PDOW();
 	}
 	public function set($name, $value)
 	{
