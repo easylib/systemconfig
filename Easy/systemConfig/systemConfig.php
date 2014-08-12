@@ -1,5 +1,5 @@
 <?php
-namespace Easy\userManagment;
+namespace Easy\systemConfig;
 class systemConfig extends Easy\PDOW\PDOW
 {}
 	public function set($name, $value)

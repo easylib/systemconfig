@@ -1,5 +1,5 @@
 <?php
-namespace Easy\userManagment;
+namespace Easy\systemConfig;
 class Install
 {
 	public function __construct()
