@@ -27,7 +27,7 @@ class Install
 	public function updateQuery($version = 0)
 	{
 		$q = array();
-		for($i=$version+1;$i<$this->version+1;$i++;)
+		for($i=$version+1;$i<$this->version+1;$i++)
 		{
 			if(isset($this->querys[$i]))
 			{
