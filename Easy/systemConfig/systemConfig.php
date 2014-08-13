@@ -2,6 +2,7 @@
 namespace Easy\systemConfig;
 class systemConfig 
 {
+	static private $ar = array();
 	public function __construct()
 	{
 		$this->pdo = new \Easy\PDOW\PDOW();
@@ -13,6 +14,10 @@ class systemConfig
 	}
 	public function get($name)
 	{
+		if(isset(self::$ar[$name]))
+		{
+			return self::$ar[$name];
+		}
 		$r = $this->pdo->fetchOneEntry("SELECT `value` FROM `systemconfig` WHERE `name` = ?", array($name));
 		if($r>0)
 		{
@@ -28,6 +33,7 @@ class systemConfig
 		{
 			$re[$res["name"]]=$res["value"];
 		}
+		self::$ar = $re;
 		return $re;
 	}
 
